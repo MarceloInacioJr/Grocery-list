@@ -1,0 +1,669 @@
+:root {
+    --color-font: #00F6E8;
+    --bg-color-bar: aqua;
+    --bg-color-btn: aqua;
+}
+
+
+/* header */
+body{
+   overflow-x: hidden;
+}
+.header {
+    height: 13vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* button exit */
+.buttonSignOut {
+    height: 70px;
+    width: 50px;
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    border: 3px solid red;
+    border-radius: 10px;
+    display: flex;
+    gap: 7px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.buttonSignOut:hover,
+.buttonSignOut:active {
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(255, 0, 0, 1);
+    box-shadow: 0px 0px 5px 0px rgba(255, 0, 0, 1);
+}
+
+.exit-legend {
+    color: rgb(255, 3, 3);
+    font-weight: bold;
+}
+
+.exit-logo {
+    height: 30px;
+    width: 30px;
+}
+
+/* title app */
+.titleApp {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: aqua;
+}
+
+/* main */
+.main {
+    height: auto;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom:300px;
+}
+
+
+.column-legend {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    padding-right: 100px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.column-legend p {
+    color: var(--color-font);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* list food */
+.list-food,
+.list-hygiene {
+    height: auto;
+    min-height: 20vh;
+    width: 95%;
+    margin-top: 20px;
+    position: relative
+}
+
+.category-title {
+    width: 100%;
+    display: flex;
+}
+
+.legend-category {
+    height: 20%;
+    flex: 0 0 auto;
+    color: var(--color-font);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.bar {
+    width: auto;
+    position: relative;
+    flex: 1;
+    padding-top: 1vh;
+    padding-left: 10px;
+}
+
+.bar>* {
+    width: 100%;
+}
+
+/* list content */
+.list-content {
+    height: auto;
+    min-height: 20vh;
+    width: 98%;
+    margin-top: -13%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 15px;
+
+}
+
+.list {
+    height: 80px;
+    width: 97%;
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    border-radius: 10px;
+    z-index: 1;
+    padding-left: 3px;
+    transition: .5s;
+}
+
+.list-check {
+    background-color: #04ff2e2f;
+}
+
+.list-undoCheck {
+    background-color: #cbc8c84f;
+}
+
+
+.list>* {
+
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.list-name {
+    font-size: 20px;
+    color: #575757;
+    font-weight: 400;
+}
+
+.list-amount input {
+    width: 60px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.list-price input {
+    width: 70px;
+}
+
+.list-amount input,
+.list-price input {
+    height: 30px;
+    background-color: #cbc8c861;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-amount p,
+.list-price p {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.list-buttons-list {
+
+    height: 100%;
+    width: 80px;
+    background-color: rgba(0, 0, 255, 0);
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    transition: .6s;
+}
+
+.button-check,
+.button-undoCheck,
+.button-delete-list {
+    margin-right: -10px;
+    width: 80%;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    transition: 1s;
+}
+
+.button-check {
+    height: 60%;
+    background-color: green;
+}
+
+.button-undoCheck {
+    height: 60%;
+    background-color: rgb(72, 72, 72);
+
+}
+
+
+
+.button-check>*,
+.button-undoCheck>* {
+    height: 20px;
+    width: 20px;
+}
+
+.button-delete-list {
+    height: 45%;
+    background-color: red;
+    color: #fff;
+    font-size: 13px;
+}
+
+/* btn erase everything*/
+.erase-everything-content {
+    height: 60px;
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-erase-everything {
+    height: 45px;
+    width: 155px;
+    background-color: red;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: .5s;
+}
+
+.btn-erase-everything {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-erase-everything:hover {
+    background-color: rgb(212, 5, 5);
+}
+
+/* modal */
+.modal {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color: #57575747;
+    z-index: 4;
+    top: 0;
+    bottom: 0;
+}
+
+/* body */
+.modal-active-body {
+    overflow: hidden !important;
+}
+
+.form-list-content {
+    height: 70%;
+    width: 60%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0 0 0;
+    box-sizing: border-box;
+}
+
+.title-form-list {
+    color: var(--color-font);
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.category-list {
+    margin-top: 4rem;
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.category-list button {
+    height: 40px;
+    width: 140px;
+    border: 3px solid var(--bg-color-btn);
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.category-list .btn-food {
+    border-radius: 10px 0 0 25px;
+    background-color: #fff;
+    color: #00F6E8;
+
+}
+
+.category-btn-active{
+    background-color: var(--bg-color-btn)!important;
+    color: #fff !important;
+}
+
+
+.category-list .btn-hygiene {
+    border-radius: 0 25px 10px 0;
+    color: #00F6E8;
+    background-color: #fff;
+
+}
+
+.inputs-list {
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.inputs-list div {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs-list div input {
+    height: 36px;
+    border: 2px solid #00F6E8;
+    border-radius: 10px;
+    background-color: #fafafa;
+    padding-left: 10px;
+}
+
+
+.inputs-list div label {
+    margin-left: 10px;
+    color: #00F6E8;
+    font-size: 16px;
+}
+
+.input-name-list {
+    width: 60%;
+}
+
+.input-amount-list {
+    width: 40%;
+
+}
+
+.btns-form-list {
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btns-form-list button {
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    font-size: 17px;
+    transition: .5s;
+}
+
+#btn-form-salve {
+    background-color: green;
+    width: 170px;
+}
+
+#btn-form-cancel {
+    background-color: red;
+    width: 130px;
+}
+
+/* modal form delete */
+
+.modal-delete-list{
+    position: fixed;
+    bottom: 0;
+    height:100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #00F6E8;
+    border-radius: 10px 10px 0 0;
+    box-sizing: border-box;
+    transition: all .45s ease-out;
+    box-sizing: border-box;
+}
+
+.modal-delete-list-active{
+    bottom:102px !important;
+}
+
+#title-delete-list{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+#btn-delete-content{
+    display: flex;
+    gap:10px
+}
+
+#btn-delete-content button{
+    height: 40px;
+    width: 120px;
+    border: none ;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;    
+    cursor: pointer;
+    transform: .2s;
+}
+
+#btn-delete-list{
+    background-color: rgb(5, 175, 5);
+}
+
+#btn-delete-cancel{
+    background-color: rgb(255, 0, 0);
+}
+
+#btn-delete-list:hover{
+    background-color: rgba(5, 175, 5, 0.753);
+}
+
+#btn-delete-cancel:hover{
+    background-color: rgb(150, 4, 4);
+}
+
+
+/* footer */
+.footer {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+    background-color: #00f6ea;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    box-sizing: border-box;
+    flex: 70%;
+}
+
+.btn-add-content {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn-add-list {
+    height: 70%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    gap: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+    box-sizing: border-box;
+}
+
+.btn-add-list:hover {
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 13px 0px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 13px 0px rgba(255, 255, 255, 1);
+}
+
+.btn-add-list p {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-font)
+}
+
+.total-content {
+    height: 90%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-total-content {
+    display: flex;
+}
+
+.title-total {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.legend-total {
+    color: #fff;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.legend-price {
+    color: #fff;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+@media(max-width:600px) {
+
+    /* main */
+    /* column legend */
+    .column-legend {
+        padding-right: 10%;
+    }
+
+    .column-legend p {
+        font-size: 17px;
+    }
+
+    /* list */
+
+    .list {
+        height: 68px;
+        padding-left: 6px;
+    }
+
+    .list-content {
+        margin-top: -8%;
+    }
+
+    .list-name {
+        font-size: 17px;
+    }
+
+    .list-amount input {
+        width: 40%;
+    }
+
+    .list-buttons-list {
+        width: 14%;
+    }
+
+    .button-check>*,
+    .button-undoCheck>* {
+        height: 15px;
+    }
+
+    .button-delete-list {
+        font-size: 9px;
+    }
+
+    /* erase everything  */
+    .btn-erase-everything:active {
+        background-color: rgb(212, 5, 5);
+    }
+
+    /* modal */
+
+    .form-list-content {
+        height: 40%;
+        width: 90%;
+    }
+
+    .category-list {
+        margin-top: 2rem;
+        margin-bottom: 2.5rem;
+
+    }
+
+    .category-list button {
+        height: 35px;
+        width: 110px;
+    }
+
+
+    .inputs-list {
+        width: 80vw;
+    }
+
+
+    .btns-form-list {
+        margin-top: 10%;
+    }
+
+
+    #btn-form-salve {
+        width: 150px;
+    }
+
+    #btn-form-cancel {
+        width: 110px;
+    }
+
+
+    /* footer */
+
+
+    .btn-add-list {
+        margin: 14px;
+        width: 90%;
+    }
+}
