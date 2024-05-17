@@ -1,0 +1,12 @@
+
+
+
+
+
+Este projeto é um aplicativo web desenvolvido para facilitar a criação e gestão de listas de compras. Os usuários podem adicionar itens à lista preenchendo um formulário simples, composto por três campos: "Categoria", "Nome do Produto" e "Quantidade". A lista é categorizada em dois grupos principais: "Alimento" e "Produtos de Higiene".
+
+Uma característica importante é que a lista é atualizada em tempo real, possibilitando que múltiplos usuários utilizem o aplicativo simultaneamente.
+
+Para garantir a segurança e o controle de acesso, a autenticação de usuários é realizada por meio do Firebase Authentication. Além disso, os dados da lista são armazenados e sincronizados em tempo real utilizando o Firebase Realtime Database.
+
+Este aplicativo web foi desenvolvido utilizando as tecnologias HTML, CSS, JavaScript, React e Firebase.
