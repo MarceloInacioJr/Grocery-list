@@ -189,19 +189,6 @@ const Main = () => {
     }, [list]);
 
 
-    useEffect(()=>{
-        if(handleModal){
-            document.body.classList.add('modal-active-body')
-            window.scrollTo({
-                top:0,
-                behavior:'smooth'
-
-            })
-        }else{
-            document.body.classList.remove('modal-active-body')
-        }
-
-    })
  
     return (
         <div className="mainContainer" >
@@ -233,7 +220,9 @@ const Main = () => {
                     </div>
 
                     <div className="list-content">
-                        {list && Object.entries(list).map(([key, item]) => {
+                        {list && Object.entries(list)
+                        .sort(([, a],[,b]) => a.prodName.localeCompare(b.prodName))
+                        .map(([key, item]) => {
 
                             if (item.prodCategory === 'food') {
                                 return (
@@ -299,7 +288,9 @@ const Main = () => {
                         </div>
                     </div>
                     <div className="list-content">
-                        {list && Object.entries(list).map(([key, item]) => {
+                        {list && Object.entries(list)
+                        .sort(([, a],[, b])=> a.prodName.localeCompare(b.prodName))
+                        .map(([key, item]) => {
                             if (item.prodCategory === 'hygiene') {
                                 return (
                                     <div className={item.prodIsCheck ? "list list-check" : "list list-undoCheck"} key={`food_${key}`}>

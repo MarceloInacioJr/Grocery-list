@@ -288,21 +288,18 @@ body{
 
 /* modal */
 .modal {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    background-color: #57575747;
+    background-color: #0c0b0b47;
     z-index: 4;
     top: 0;
     bottom: 0;
 }
 
-/* body */
-.modal-active-body {
-    overflow: hidden !important;
-}
+
 
 .form-list-content {
     height: 70%;
@@ -440,6 +437,7 @@ body{
     box-sizing: border-box;
     transition: all .45s ease-out;
     box-sizing: border-box;
+    z-index: 2;
 }
 
 .modal-delete-list-active{
