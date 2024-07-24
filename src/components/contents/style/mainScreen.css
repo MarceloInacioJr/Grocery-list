@@ -622,8 +622,8 @@ body{
     /* modal */
 
     .form-list-content {
-        height: 40%;
-        width: 90%;
+        height: 359px;
+        width: 95%;
     }
 
     .category-list {
@@ -641,6 +641,10 @@ body{
     .inputs-list {
         width: 80vw;
     }
+
+    .inputs-list div label{
+        margin-bottom: 3px;    
+    } 
 
 
     .btns-form-list {
