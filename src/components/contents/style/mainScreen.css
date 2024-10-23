@@ -357,20 +357,23 @@ body{
 
 }
 
-.inputs-list {
+.container-inputs-list-form,
+.container-input-list-check-form
+ {
     width: 40vw;
     display: flex;
     justify-content: center;
-    gap: 10px;
-
+    gap: 10px; 
 }
 
-.inputs-list div {
+.container-inputs-list-form div,
+.container-input-list-check-form div {
     display: flex;
     flex-direction: column;
 }
 
-.inputs-list div input {
+.container-inputs-list-form div input,
+.container-input-list-check-form div input {
     height: 36px;
     border: 2px solid #00F6E8;
     border-radius: 10px;
@@ -379,11 +382,20 @@ body{
 }
 
 
-.inputs-list div label {
+.container-inputs-list-form div label,
+.container-input-list-check-form div label{
     margin-left: 10px;
     color: #00F6E8;
     font-size: 16px;
+    margin-bottom: 7px;
 }
+
+.container-input-list-check-form{
+    margin-top: 2%;
+    justify-content: space-around;
+}
+
+.i
 
 .input-name-list {
     width: 60%;
@@ -391,8 +403,49 @@ body{
 
 .input-amount-list {
     width: 40%;
-
 }
+
+.input-check-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#component-checkbox-list{
+    height: 32px;
+    width: 32px;
+    border: 2px solid #00F6E8;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#component-checkbox-list-checked{
+    height: 22px;
+    width: 22px;
+    border-radius: 2px;
+    background-color: #00F6E8;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#icon-select-check {
+    height: 15px;
+    width: 15px;
+}
+
+
+
+.container-input-price-product-form{
+    width: 60%;
+}
+
+
 
 .btns-form-list {
     margin-top: 15%;
@@ -424,7 +477,7 @@ body{
 
 /* modal form delete */
 
-.modal-delete-list{
+.modal-delete-all-list{
     position: fixed;
     bottom: 0;
     height:100px;
@@ -440,7 +493,7 @@ body{
     z-index: 2;
 }
 
-.modal-delete-list-active{
+.modal-delete-all-list-active{
     bottom:102px !important;
 }
 
@@ -469,6 +522,7 @@ body{
     transform: .2s;
 }
 
+
 #btn-delete-list{
     background-color: rgb(5, 175, 5);
 }
@@ -485,6 +539,70 @@ body{
     background-color: rgb(150, 4, 4);
 }
 
+/* modal delete list */
+.cover-modal-delete-list{
+    position: fixed;
+    display: flex;
+    padding-top: 13%;
+    justify-content: center;
+    width: 100vw;
+    background-color: #0c0b0b47;
+    z-index: 4;
+    top: 0;
+    bottom: 0;
+}
+
+ .modal-delete-list{
+    position: fixed;
+    height: 25%;
+    width: 93%;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid rgb(215, 215, 215);
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+    box-sizing: border-box;
+ }
+
+ .modal-delete-list-name-component{
+    margin-top: 8px;
+    height: 40px;
+    width: 100%;
+    color: #575757;
+    background-color: #04ff2e2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+ }
+
+ .btns-delete-cancel-modal-delete-list{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;    
+}
+
+#btn-delete-modal-list,
+#btn-cancel-modal-list{
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    color:#fff;
+}
+
+#btn-delete-modal-list{
+    background-color: green;
+}
+
+#btn-cancel-modal-list{
+    background-color: red;
+}
 
 /* footer */
 .footer {
@@ -572,6 +690,7 @@ body{
 
 @media(max-width:600px) {
 
+
     /* main */
     /* column legend */
     .column-legend {
@@ -622,9 +741,22 @@ body{
     /* modal */
 
     .form-list-content {
-        height: 359px;
+        height: 60%;
         width: 95%;
+        padding: 10px;
+        box-sizing: border-box;
     }
+
+
+    .container-inputs-list-form,
+    .container-input-list-check-form
+    {
+        width: 90%;
+        margin-left: 5%;
+
+       
+    }
+
 
     .category-list {
         margin-top: 2rem;
@@ -660,6 +792,10 @@ body{
         width: 110px;
     }
 
+    /* modal delete list */
+    .cover-modal-delete-list {
+        padding-top: 40%;
+    }
 
     /* footer */
 
