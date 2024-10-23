@@ -11,6 +11,9 @@
 # production
 /build
 
+#credentiais
+/src/db.js
+
 
 # misc
 .DS_Store
